@@ -459,10 +459,18 @@
         .testimonial-avatar {
             width: 60px;
             height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #ffffff, #f5f5f5);
             border-radius: 50%;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             margin-right: 1.5rem;
-            background-size: cover;
-            background-position: center;
+            border: 2px solid var(--accent-light);
+        }
+
+        .testimonial-avatar i {
+            font-size: 2.5rem;
         }
         
         .testimonial-meta h4 {
@@ -799,7 +807,7 @@
         <div class="container">
             <div class="hero-content">
                 <div class="badge">100% Natural • Respaldo Científico</div>
-                <h1>La ciencia de la naturaleza para tu cabello</h1>
+                <h1>Realza tu belleza natural</h1>
                 <p>Descubre los óleos esenciales premium que detienen la caída y transforman tu cabello, cejas y pestañas con ingredientes 100% naturales y formulaciones científicamente respaldadas.</p>
                 <a href="#productos" class="btn">Conoce nuestros productos</a>
             </div>
@@ -910,37 +918,37 @@
             </div>
             <div class="ingredients">
                 <div class="ingredient-card">
-                    <div class="ingredient-image" style="background-image: url('images/oleo-ricino.jpg');"></div>
+                    <div class="ingredient-image" style="background-image: url('images/ricino.jpg');"></div>
                     <h4 class="ingredient-name">Óleo de Ricino</h4>
                     <p>Rico en ácido ricinoleico, vitamina E y ácidos grasos omega-6 y 9 que nutren el folículo capilar.</p>
                 </div>
                 <div class="ingredient-card">
-                    <div class="ingredient-image" style="background-image: url('images/oleo-romero.jpg');"></div>
+                    <div class="ingredient-image" style="background-image: url('images/romero.jpg');"></div>
                     <h4 class="ingredient-name">Óleo de Romero</h4>
                     <p>Estimula la circulación sanguínea y promueve el crecimiento capilar al activar los folículos.</p>
                 </div>
                 <div class="ingredient-card">
-                    <div class="ingredient-image" style="background-image: url('images/oleo-ortiga.jpg');"></div>
+                    <div class="ingredient-image" style="background-image: url('images/ortiga.jpg');"></div>
                     <h4 class="ingredient-name">Óleo de Ortiga</h4>
                     <p>Fortalece el cabello, previene la caída y controla la producción excesiva de sebo en el cuero cabelludo.</p>
                 </div>
                 <div class="ingredient-card">
-                    <div class="ingredient-image" style="background-image: url('images/oleo-jojoba.jpg');"></div>
+                    <div class="ingredient-image" style="background-image: url('images/jojoba.jpg');"></div>
                     <h4 class="ingredient-name">Óleo de Jojoba</h4>
                     <p>Equilibra la producción de sebo, hidrata el cuero cabelludo y fortalece el cabello desde la raíz.</p>
                 </div>
                 <div class="ingredient-card">
-                    <div class="ingredient-image" style="background-image: url('images/oleo-menta.jpg');"></div>
+                    <div class="ingredient-image" style="background-image: url('images/menta.jpg');"></div>
                     <h4 class="ingredient-name">Óleo de Menta</h4>
                     <p>Refresca el cuero cabelludo, estimula el flujo sanguíneo y proporciona una sensación de frescura.</p>
                 </div>
                 <div class="ingredient-card">
-                    <div class="ingredient-image" style="background-image: url('images/vitamina-e.jpg');"></div>
+                    <div class="ingredient-image" style="background-image: url('images/vitaminaE.jpg');"></div>
                     <h4 class="ingredient-name">Óleo Vitamina E</h4>
                     <p>Potente antioxidante que protege el folículo capilar, repara el daño y previene el envejecimiento prematuro.</p>
                 </div>
                 <div class="ingredient-card">
-                    <div class="ingredient-image" style="background-image: url('images/oleo-arbol-te.jpg');"></div>
+                    <div class="ingredient-image" style="background-image: url('images/arboldete.jpg');"></div>
                     <h4 class="ingredient-name">Óleo de Árbol de Té</h4>
                     <p>Propiedades antimicrobianas que mantienen el cuero cabelludo saludable y libre de irritaciones.</p>
                 </div>
@@ -957,7 +965,7 @@
             <div class="results">
                 <div class="result-card">
                     <div class="result-single-image">
-                        <img src="images/testimonio-capilar1.png" alt="Antes y después - Caso 1">
+                        <img src="images/testimonio-capilar1.jpeg" alt="Antes y después - Caso 1">
                     </div>
                     <div class="result-details">
                         <h4>Carlos, 34 años</h4>
@@ -966,7 +974,7 @@
                 </div>
                 <div class="result-card">
                     <div class="result-single-image">
-                        <img src="images/testimonio-capilar.jpeg" alt="Antes y después - Caso 2">
+                        <img src="images/testimonio-capilar.png" alt="Antes y después - Caso 2">
                     </div>
                     <div class="result-details">
                         <h4>Maria, 40 años</h4>
@@ -1030,7 +1038,7 @@
                 <div class="testimonial">
                     <div class="testimonial-header">
                         <div class="testimonial-avatar">
-                            <i class="fas fa-user-female"></i>
+                            <i class="fas fa-user-circle fa-3x" style="color: var(--accent-dark);"></i>
                         </div>
                         <div class="testimonial-meta">
                             <h4>Laura Medina</h4>
@@ -1048,7 +1056,7 @@
                 <div class="testimonial">
                     <div class="testimonial-header">
                         <div class="testimonial-avatar">
-                            <i class="fas fa-male"></i>
+                            <i class="fas fa-user-tie fa-3x" style="color: var(--accent-dark);"></i>
                         </div>
                         <div class="testimonial-meta">
                             <h4>Andrés Gutiérrez</h4>
@@ -1066,7 +1074,7 @@
                 <div class="testimonial">
                     <div class="testimonial-header">
                         <div class="testimonial-avatar">
-                            <i class="fas fa-female"></i>
+                            <i class="fas fa-user-alt fa-3x" style="color: var(--accent-dark);"></i>
                         </div>
                         <div class="testimonial-meta">
                             <h4>Valentina Restrepo</h4>
