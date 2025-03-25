@@ -214,13 +214,16 @@
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0,0,0,0.15);
         }
-        
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
         .product-image {
             height: 250px;
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
             background-color: var(--light);
+            transition: transform 0.3s ease;
         }
         
         .product-details {
