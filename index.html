@@ -374,6 +374,24 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
+        .result-single-image {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 10px 10px 0 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .result-single-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .result-card:hover .result-single-image img {
+            transform: scale(1.03);
+        }
         
         .result-card {
             border-radius: 10px;
@@ -782,7 +800,7 @@
             <div class="hero-content">
                 <div class="badge">100% Natural • Respaldo Científico</div>
                 <h1>La ciencia de la naturaleza para tu cabello</h1>
-                <p>Descubre los aceites esenciales premium que detienen la caída y transforman tu cabello, cejas y pestañas con ingredientes 100% naturales y formulaciones científicamente respaldadas.</p>
+                <p>Descubre los óleos esenciales premium que detienen la caída y transforman tu cabello, cejas y pestañas con ingredientes 100% naturales y formulaciones científicamente respaldadas.</p>
                 <a href="#productos" class="btn">Conoce nuestros productos</a>
             </div>
         </div>
@@ -799,7 +817,7 @@
                     <div class="product-image" style="background-image: url('images/capilar.jpg');"></div>
                     <div class="product-details">
                         <h3 class="product-title">Óleo Capilar Forti (60ml)</h3>
-                        <p class="product-description">Fórmula exclusiva con 7 aceites naturales que detiene la caída desde la primera semana, activa la circulación y fortalece desde la raíz.</p>
+                        <p class="product-description">Fórmula exclusiva con 7 óleos naturales que detiene la caída desde la primera semana, activa la circulación y fortalece desde la raíz.</p>
                         <ul>
                             <li>Detiene la caída desde la primera semana</li>
                             <li>Activa la circulación y estimula el crecimiento</li>
@@ -813,8 +831,8 @@
                 <div class="product-card">
                     <div class="product-image" style="background-image: url('images/cejas.jpg');"></div>
                     <div class="product-details">
-                        <h3 class="product-title">Óleo para Cejas y Pestañas Forti (13ml)</h3>
-                        <p class="product-description">Concentrado de 5 aceites naturales que aumenta visiblemente la densidad y longitud de tus cejas y pestañas.</p>
+                        <h3 class="product-title">Óleo para Cejas y Pestañas Forti (10ml)</h3>
+                        <p class="product-description">Concentrado de 5 óleos naturales que aumenta visiblemente la densidad y longitud de tus cejas y pestañas.</p>
                         <ul>
                             <li>Aumenta visiblemente la densidad y longitud</li>
                             <li>Fortalece y previene la caída</li>
@@ -892,53 +910,39 @@
             </div>
             <div class="ingredients">
                 <div class="ingredient-card">
-                    <div class="ingredient-image" style="background-image: url('/api/placeholder/200/200');"></div>
-                    <h4 class="ingredient-name">Aceite de Ricino</h4>
+                    <div class="ingredient-image" style="background-image: url('images/oleo-ricino.jpg');"></div>
+                    <h4 class="ingredient-name">Óleo de Ricino</h4>
                     <p>Rico en ácido ricinoleico, vitamina E y ácidos grasos omega-6 y 9 que nutren el folículo capilar.</p>
                 </div>
                 <div class="ingredient-card">
-                    <div class="ingredient-image" style="background-image: url('/api/placeholder/200/200');"></div>
-                    <h4 class="ingredient-name">Aceite de Romero</h4>
+                    <div class="ingredient-image" style="background-image: url('images/oleo-romero.jpg');"></div>
+                    <h4 class="ingredient-name">Óleo de Romero</h4>
                     <p>Estimula la circulación sanguínea y promueve el crecimiento capilar al activar los folículos.</p>
                 </div>
                 <div class="ingredient-card">
-                    <div class="ingredient-image" style="background-image: url('/api/placeholder/200/200');"></div>
-                    <h4 class="ingredient-name">Aceite de Jojoba</h4>
+                    <div class="ingredient-image" style="background-image: url('images/oleo-ortiga.jpg');"></div>
+                    <h4 class="ingredient-name">Óleo de Ortiga</h4>
+                    <p>Fortalece el cabello, previene la caída y controla la producción excesiva de sebo en el cuero cabelludo.</p>
+                </div>
+                <div class="ingredient-card">
+                    <div class="ingredient-image" style="background-image: url('images/oleo-jojoba.jpg');"></div>
+                    <h4 class="ingredient-name">Óleo de Jojoba</h4>
                     <p>Equilibra la producción de sebo, hidrata el cuero cabelludo y fortalece el cabello desde la raíz.</p>
                 </div>
                 <div class="ingredient-card">
-                    <div class="ingredient-image" style="background-image: url('/api/placeholder/200/200');"></div>
-                    <h4 class="ingredient-name">Aceite de Árbol de Té</h4>
+                    <div class="ingredient-image" style="background-image: url('images/oleo-menta.jpg');"></div>
+                    <h4 class="ingredient-name">Óleo de Menta</h4>
+                    <p>Refresca el cuero cabelludo, estimula el flujo sanguíneo y proporciona una sensación de frescura.</p>
+                </div>
+                <div class="ingredient-card">
+                    <div class="ingredient-image" style="background-image: url('images/vitamina-e.jpg');"></div>
+                    <h4 class="ingredient-name">Óleo Vitamina E</h4>
+                    <p>Potente antioxidante que protege el folículo capilar, repara el daño y previene el envejecimiento prematuro.</p>
+                </div>
+                <div class="ingredient-card">
+                    <div class="ingredient-image" style="background-image: url('images/oleo-arbol-te.jpg');"></div>
+                    <h4 class="ingredient-name">Óleo de Árbol de Té</h4>
                     <p>Propiedades antimicrobianas que mantienen el cuero cabelludo saludable y libre de irritaciones.</p>
-                </div>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-microscope"></i>
-                    </div>
-                    <div>
-                        <h4>Formulación Exclusiva</h4>
-                        <p>Cada producto es resultado de años de investigación y desarrollo para obtener la combinación ideal de ingredientes activos.</p>
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-vial"></i>
-                    </div>
-                    <div>
-                        <h4>Respaldo Científico</h4>
-                        <p>Nuestras fórmulas están respaldadas por estudios que confirman la efectividad de cada ingrediente.</p>
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <div>
-                        <h4>Pureza Garantizada</h4>
-                        <p>Utilizamos ingredientes orgánicos de la más alta calidad, sin aditivos ni preservantes artificiales.</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -952,29 +956,26 @@
             </div>
             <div class="results">
                 <div class="result-card">
-                    <div class="result-images">
-                        <div class="result-before" style="background-image: url('/api/placeholder/400/400');"></div>
-                        <div class="result-after" style="background-image: url('/api/placeholder/400/400');"></div>
+                    <div class="result-single-image">
+                        <img src="images/testimonio-capilar1.png" alt="Antes y después - Caso 1">
                     </div>
                     <div class="result-details">
-                        <h4>María, 34 años</h4>
+                        <h4>Carlos, 34 años</h4>
                         <p>"Después de 8 semanas usando el Óleo Capilar Forti, recuperé la densidad y el brillo de mi cabello."</p>
                     </div>
                 </div>
                 <div class="result-card">
-                    <div class="result-images">
-                        <div class="result-before" style="background-image: url('/api/placeholder/400/400');"></div>
-                        <div class="result-after" style="background-image: url('/api/placeholder/400/400');"></div>
+                    <div class="result-single-image">
+                        <img src="images/testimonio-capilar.jpeg" alt="Antes y después - Caso 2">
                     </div>
                     <div class="result-details">
-                        <h4>Carlos, 40 años</h4>
+                        <h4>Maria, 40 años</h4>
                         <p>"Mi línea frontal comenzó a recuperarse desde la tercera semana de uso consistente."</p>
                     </div>
                 </div>
                 <div class="result-card">
-                    <div class="result-images">
-                        <div class="result-before" style="background-image: url('/api/placeholder/400/400');"></div>
-                        <div class="result-after" style="background-image: url('/api/placeholder/400/400');"></div>
+                    <div class="result-single-image">
+                        <img src="images/testimonio-cejas.png" alt="Antes y después - Caso 3">
                     </div>
                     <div class="result-details">
                         <h4>Lucía, 29 años</h4>
@@ -1028,7 +1029,9 @@
             <div class="testimonials">
                 <div class="testimonial">
                     <div class="testimonial-header">
-                        <div class="testimonial-avatar" style="background-image: url('/api/placeholder/100/100');"></div>
+                        <div class="testimonial-avatar">
+                            <i class="fas fa-user-female"></i>
+                        </div>
                         <div class="testimonial-meta">
                             <h4>Laura Medina</h4>
                             <div class="testimonial-rating">
@@ -1044,7 +1047,9 @@
                 </div>
                 <div class="testimonial">
                     <div class="testimonial-header">
-                        <div class="testimonial-avatar" style="background-image: url('/api/placeholder/100/100');"></div>
+                        <div class="testimonial-avatar">
+                            <i class="fas fa-male"></i>
+                        </div>
                         <div class="testimonial-meta">
                             <h4>Andrés Gutiérrez</h4>
                             <div class="testimonial-rating">
@@ -1060,7 +1065,9 @@
                 </div>
                 <div class="testimonial">
                     <div class="testimonial-header">
-                        <div class="testimonial-avatar" style="background-image: url('/api/placeholder/100/100');"></div>
+                        <div class="testimonial-avatar">
+                            <i class="fas fa-female"></i>
+                        </div>
                         <div class="testimonial-meta">
                             <h4>Valentina Restrepo</h4>
                             <div class="testimonial-rating">
@@ -1090,7 +1097,7 @@
                         <i class="fas fa-thumbs-up"></i>
                     </div>
                     <h3 class="guarantee-title">Garantía de Satisfacción</h3>
-                    <p>Si no ves mejoras visibles en 30 días de uso constante, te ofrecemos reembolso o reemplazo.</p>
+                    <p>Si no ves mejoras visibles en 3 meses de uso constante, te ofrecemos reembolso o reemplazo.</p>
                 </div>
                 <div class="guarantee-card">
                     <div class="guarantee-icon">
