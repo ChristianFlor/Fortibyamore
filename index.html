@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forti by Amore Premium | Cuidado Capilar Natural y Científico</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #064B2A;
+            --secondary: #0B4D28;
+            --accent: #E0B351;
+            --accent-dark: #B88B26;
+            --accent-light: #EFD276;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --gold-gradient: linear-gradient(to right, #E0B351, #B88B26, #EFD276);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        body {
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--gold-gradient);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(184, 139, 38, 0.3);
+        }
+        
+        .btn:hover {
+            background: var(--primary);
+            color: var(--accent);
+            box-shadow: 0 6px 20px rgba(184, 139, 38, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--accent-dark);
+            border: 2px solid var(--accent-dark);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--gold-gradient);
+            color: white;
+            border: 2px solid var(--accent);
+        }
+        
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+        }
+        
+        .logo {
+            height: 50px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 100%;
+            width: auto;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url('images/hero-bg.jpg') center/cover no-repeat;
+            padding-top: 80px;
+        }
+        
+        .hero-content {
+            max-width: 600px;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: var(--gold-gradient);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 10px rgba(184, 139, 38, 0.3);
+        }
+        
+        .section {
+            padding: 6rem 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--gold-gradient);
+        }
+        
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .product-image {
+            height: 250px;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: var(--light);
+        }
+        
+        .product-details {
+            padding: 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .product-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .product-description {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+        
+        .product-price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+        
+        .product-price .regular {
+            font-size: 1rem;
+            text-decoration: line-through;
+            color: var(--gray);
+            margin-left: 10px;
+        }
+        
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .benefit-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .benefit-icon {
+            font-size: 3rem;
+            color: var(--accent-dark);
+            margin-bottom: 1.5rem;
+        }
+        
+        .benefit-title {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: var(--gold-gradient);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        .timeline-item {
+            padding: 2rem 0;
+            position: relative;
+        }
+        
+        .timeline-content {
+            position: relative;
+            width: calc(50% - 40px);
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: calc(50% + 40px);
+        }
+        
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 4px;
+            background-color: var(--secondary);
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content::before {
+            right: -40px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content::before {
+            left: -40px;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: var(--gold-gradient);
+            border: 5px solid white;
+            z-index: 1;
+            box-shadow: 0 0 10px rgba(184, 139, 38, 0.4);
+        }
+        
+        .timeline-week {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .results {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .result-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .result-images {
+            display: flex;
+            height: 300px;
+        }
+        
+        .result-before, .result-after {
+            flex: 1;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .result-before::after, .result-after::after {
+            content: 'ANTES';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 0.5rem;
+            background-color: rgba(0,0,0,0.7);
+            color: white;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .result-after::after {
+            content: 'DESPUÉS';
+        }
+        
+        .result-details {
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .result-details h4 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .testimonials {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .testimonial {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+        
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 1.5rem;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .testimonial-meta h4 {
+            margin-bottom: 0.25rem;
+        }
+        
+        .testimonial-rating {
+            color: #ffc107;
+            font-size: 1.2rem;
+        }
+        
+        .ingredients {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+        
+        .ingredient-card {
+            text-align: center;
+        }
+        
+        .ingredient-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            background-size: cover;
+            background-position: center;
+            background-color: var(--light);
+        }
+        
+        .ingredient-name {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .guarantees {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .guarantee-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        
+        .guarantee-icon {
+            font-size: 3rem;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+        
+        .guarantee-title {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta {
+            background-color: var(--light);
+            padding: 6rem 0;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .faqs {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 1.5rem;
+        }
+        
+        .faq-question {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+        }
+        
+        .faq-answer {
+            padding: 1.5rem;
+            display: none;
+        }
+        
+        .faq-item.active .faq-question {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+        
+        .faq-item.active .faq-answer {
+            display: block;
+            background-color: white;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 4rem 0;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .footer-links a {
+            display: block;
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            margin-bottom: 0.75rem;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.7);
+        }
+        
+        @media (max-width: 992px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .timeline::before {
+                left: 30px;
+            }
+            
+            .timeline-content {
+                width: calc(100% - 80px);
+                margin-left: 80px !important;
+            }
+            
+            .timeline-dot {
+                left: 30px;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-content::before,
+            .timeline-item:nth-child(even) .timeline-content::before {
+                left: -50px;
+                width: 50px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero {
+                padding-top: 120px;
+                height: auto;
+                padding-bottom: 4rem;
+            }
+            
+            .section {
+                padding: 4rem 0;
+            }
+        }
+        
+        .floating-cta {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 100;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 4px 15px rgba(184, 139, 38, 0.3);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 10px 25px rgba(184, 139, 38, 0.5);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 4px 15px rgba(184, 139, 38, 0.3);
+            }
+        }
+        
+        .scroll-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 12rem;
+            background-color: var(--dark);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 100;
+        }
+        
+        .scroll-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .scroll-to-top:hover {
+            background-color: var(--primary);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        
+        .feature-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--primary);
+            min-width: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Forti by Amore">
+                </div>
+                <nav class="nav-links">
+                    <a href="#productos">Productos</a>
+                    <a href="#beneficios">Beneficios</a>
+                    <a href="#resultados">Resultados</a>
+                    <a href="#ciencia">Ciencia</a>
+                    <a href="#testimonios">Testimonios</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-content">
+                <div class="badge">100% Natural • Respaldo Científico</div>
+                <h1>La ciencia de la naturaleza para tu cabello</h1>
+                <p>Descubre los aceites esenciales premium que detienen la caída y transforman tu cabello, cejas y pestañas con ingredientes 100% naturales y formulaciones científicamente respaldadas.</p>
+                <a href="#productos" class="btn">Conoce nuestros productos</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section" id="productos">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestros Productos</h2>
+                <p>Formulados por química especializada con ingredientes 100% naturales para resultados excepcionales sin efectos secundarios.</p>
+            </div>
+            <div class="products">
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('/api/placeholder/400/400');"></div>
+                    <div class="product-details">
+                        <h3 class="product-title">Óleo Capilar Forti (60ml)</h3>
+                        <p class="product-description">Fórmula exclusiva con 7 aceites naturales que detiene la caída desde la primera semana, activa la circulación y fortalece desde la raíz.</p>
+                        <ul>
+                            <li>Detiene la caída desde la primera semana</li>
+                            <li>Activa la circulación y estimula el crecimiento</li>
+                            <li>Fortalece desde la raíz</li>
+                            <li>Equilibra el cuero cabelludo</li>
+                        </ul>
+                        <div class="product-price">$59.000</div>
+                        <a href="#comprar" class="btn">Comprar Ahora</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('/api/placeholder/400/400');"></div>
+                    <div class="product-details">
+                        <h3 class="product-title">Óleo para Cejas y Pestañas Forti (13ml)</h3>
+                        <p class="product-description">Concentrado de 5 aceites naturales que aumenta visiblemente la densidad y longitud de tus cejas y pestañas.</p>
+                        <ul>
+                            <li>Aumenta visiblemente la densidad y longitud</li>
+                            <li>Fortalece y previene la caída</li>
+                            <li>Aplicador roll-on de precisión</li>
+                            <li>Ideal para zona ocular</li>
+                        </ul>
+                        <div class="product-price">$45.000</div>
+                        <a href="#comprar" class="btn">Comprar Ahora</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('/api/placeholder/400/400');"></div>
+                    <div class="product-details">
+                        <h3 class="product-title">Kit Completo Forti</h3>
+                        <p class="product-description">Sistema integral que incluye ambos productos para una transformación completa de tu cabello, cejas y pestañas.</p>
+                        <ul>
+                            <li>Óleo Capilar Forti (60ml)</li>
+                            <li>Óleo para Cejas y Pestañas (13ml)</li>
+                            <li>E-book educativo</li>
+                            <li>Asesoría personalizada</li>
+                            <li>Envío gratis a todo Colombia</li>
+                        </ul>
+                        <div class="product-price">$89.000 <span class="regular">$104.000</span></div>
+                        <a href="#comprar" class="btn">Comprar Ahora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section" style="background-color: var(--light);" id="beneficios">
+        <div class="container">
+            <div class="section-header">
+                <h2>Beneficios Únicos</h2>
+                <p>¿Por qué elegir Forti by Amore Premium?</p>
+            </div>
+            <div class="benefits">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3 class="benefit-title">Formulación Científica</h3>
+                    <p>Desarrollados por química especializada con ingredientes 100% naturales y respaldo científico.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3 class="benefit-title">100% Natural</h3>
+                    <p>Sin químicos agresivos ni efectos secundarios, solo ingredientes naturales de la más alta calidad.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3 class="benefit-title">Seguimiento Personalizado</h3>
+                    <p>Te acompañamos durante todo el tratamiento, adaptándolo a tus necesidades específicas.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="benefit-title">Resultados Progresivos</h3>
+                    <p>Enfoque en resultados sostenibles y duraderos, no soluciones temporales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section" id="ciencia">
+        <div class="container">
+            <div class="section-header">
+                <h2>La Ciencia Detrás de Forti</h2>
+                <p>Conoce los ingredientes naturales cuidadosamente seleccionados por su efectividad comprobada.</p>
+            </div>
+            <div class="ingredients">
+                <div class="ingredient-card">
+                    <div class="ingredient-image" style="background-image: url('/api/placeholder/200/200');"></div>
+                    <h4 class="ingredient-name">Aceite de Ricino</h4>
+                    <p>Rico en ácido ricinoleico, vitamina E y ácidos grasos omega-6 y 9 que nutren el folículo capilar.</p>
+                </div>
+                <div class="ingredient-card">
+                    <div class="ingredient-image" style="background-image: url('/api/placeholder/200/200');"></div>
+                    <h4 class="ingredient-name">Aceite de Romero</h4>
+                    <p>Estimula la circulación sanguínea y promueve el crecimiento capilar al activar los folículos.</p>
+                </div>
+                <div class="ingredient-card">
+                    <div class="ingredient-image" style="background-image: url('/api/placeholder/200/200');"></div>
+                    <h4 class="ingredient-name">Aceite de Jojoba</h4>
+                    <p>Equilibra la producción de sebo, hidrata el cuero cabelludo y fortalece el cabello desde la raíz.</p>
+                </div>
+                <div class="ingredient-card">
+                    <div class="ingredient-image" style="background-image: url('/api/placeholder/200/200');"></div>
+                    <h4 class="ingredient-name">Aceite de Árbol de Té</h4>
+                    <p>Propiedades antimicrobianas que mantienen el cuero cabelludo saludable y libre de irritaciones.</p>
+                </div>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <div>
+                        <h4>Formulación Exclusiva</h4>
+                        <p>Cada producto es resultado de años de investigación y desarrollo para obtener la combinación ideal de ingredientes activos.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-vial"></i>
+                    </div>
+                    <div>
+                        <h4>Respaldo Científico</h4>
+                        <p>Nuestras fórmulas están respaldadas por estudios que confirman la efectividad de cada ingrediente.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div>
+                        <h4>Pureza Garantizada</h4>
+                        <p>Utilizamos ingredientes orgánicos de la más alta calidad, sin aditivos ni preservantes artificiales.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section" style="background-color: var(--light);" id="resultados">
+        <div class="container">
+            <div class="section-header">
+                <h2>Resultados Visibles</h2>
+                <p>Transformaciones reales de nuestros clientes satisfechos.</p>
+            </div>
+            <div class="results">
+                <div class="result-card">
+                    <div class="result-images">
+                        <div class="result-before" style="background-image: url('/api/placeholder/400/400');"></div>
+                        <div class="result-after" style="background-image: url('/api/placeholder/400/400');"></div>
+                    </div>
+                    <div class="result-details">
+                        <h4>María, 34 años</h4>
+                        <p>"Después de 8 semanas usando el Óleo Capilar Forti, recuperé la densidad y el brillo de mi cabello."</p>
+                    </div>
+                </div>
+                <div class="result-card">
+                    <div class="result-images">
+                        <div class="result-before" style="background-image: url('/api/placeholder/400/400');"></div>
+                        <div class="result-after" style="background-image: url('/api/placeholder/400/400');"></div>
+                    </div>
+                    <div class="result-details">
+                        <h4>Carlos, 40 años</h4>
+                        <p>"Mi línea frontal comenzó a recuperarse desde la tercera semana de uso consistente."</p>
+                    </div>
+                </div>
+                <div class="result-card">
+                    <div class="result-images">
+                        <div class="result-before" style="background-image: url('/api/placeholder/400/400');"></div>
+                        <div class="result-after" style="background-image: url('/api/placeholder/400/400');"></div>
+                    </div>
+                    <div class="result-details">
+                        <h4>Lucía, 29 años</h4>
+                        <p>"Mis cejas y pestañas ahora lucen más gruesas y largas. ¡El cambio es impresionante!"</p>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-week">Semanas 1-2</div>
+                        <h4>Reducción de la Caída</h4>
+                        <p>Notarás una disminución significativa en la caída del cabello durante el lavado y cepillado. El cuero cabelludo comenzará a equilibrarse.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-week">Semanas 3-4</div>
+                        <h4>Mejora en Textura</h4>
+                        <p>Tu cabello se sentirá más fuerte y con mejor textura. Aparecerán los primeros signos de nuevo crecimiento en forma de pequeños cabellos.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-week">Semanas 6-8</div>
+                        <h4>Aumento en Densidad</h4>
+                        <p>Se observará un aumento notable en la densidad del cabello. Las cejas y pestañas lucirán visiblemente más pobladas y largas.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-week">Semana 12</div>
+                        <h4>Transformación Completa</h4>
+                        <p>Transformación significativa y visible. Tu cabello estará más fuerte, con mayor densidad y un aspecto saludable que reflejará tu confianza.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section" id="testimonios">
+        <div class="container">
+            <div class="section-header">
+                <h2>Lo Que Dicen Nuestros Clientes</h2>
+                <p>Experiencias reales de personas que han transformado su cabello con Forti.</p>
+            </div>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar" style="background-image: url('/api/placeholder/100/100');"></div>
+                        <div class="testimonial-meta">
+                            <h4>Laura Medina</h4>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"Después de probar varios productos para la caída del cabello sin resultados, encontré Forti. En solo 6 semanas, la diferencia es notable. Mi cabello está más fuerte, brillante y la caída se redujo drásticamente. Lo recomiendo totalmente."</p>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar" style="background-image: url('/api/placeholder/100/100');"></div>
+                        <div class="testimonial-meta">
+                            <h4>Andrés Gutiérrez</h4>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"Como hombre de 38 años, estaba preocupado por el adelgazamiento de mi cabello. El Óleo Capilar Forti cambió todo. Mi cuero cabelludo se siente más saludable y he notado nuevo crecimiento en áreas que estaban adelgazando. El asesoramiento personalizado fue clave."</p>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar" style="background-image: url('/api/placeholder/100/100');"></div>
+                        <div class="testimonial-meta">
+                            <h4>Valentina Restrepo</h4>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"El Óleo para Cejas y Pestañas es increíble. Mis pestañas siempre fueron cortas y escasas, pero después de 5 semanas de uso constante, son notablemente más largas y densas. Ahora casi no necesito usar máscara de pestañas. ¡Un cambio que aumentó mi confianza!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section" style="background-color: var(--light);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestras Garantías</h2>
+                <p>Tu satisfacción es nuestra prioridad.</p>
+            </div>
+            <div class="guarantees">
+                <div class="guarantee-card">
+                    <div class="guarantee-icon">
+                        <i class="fas fa-thumbs-up"></i>
+                    </div>
+                    <h3 class="guarantee-title">Garantía de Satisfacción</h3>
+                    <p>Si no ves mejoras visibles en 30 días de uso constante, te ofrecemos reembolso o reemplazo.</p>
+                </div>
+                <div class="guarantee-card">
+                    <div class="guarantee-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3 class="guarantee-title">Garantía de Entrega</h3>
+                    <p>Reemplazo sin costo por demoras o daños en el envío. Tu producto llegará en perfectas condiciones.</p>
+                </div>
+                <div class="guarantee-card">
+                    <div class="guarantee-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3 class="guarantee-title">Garantía de Calidad</h3>
+                    <p>Ingredientes 100% naturales seleccionados por su pureza y efectividad, con los más altos estándares de calidad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section" id="faqs">
+        <div class="container">
+            <div class="section-header">
+                <h2>Preguntas Frecuentes</h2>
+                <p>Resolvemos tus dudas sobre nuestros productos.</p>
+            </div>
+            <div class="faqs">
+                <div class="faq-item">
+                    <div class="faq-question">¿Cuánto tiempo debo usar los productos para ver resultados?</div>
+                    <div class="faq-answer">
+                        <p>Notarás una reducción visible en la caída desde las primeras 1-2 semanas de uso. Para ver un aumento notable en la densidad, recomendamos un uso consistente durante 6-8 semanas. La transformación significativa se observa generalmente a partir de las 12 semanas de uso continuo.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">¿Los productos funcionan para todo tipo de cabello?</div>
+                    <div class="faq-answer">
+                        <p>Sí, nuestros productos están formulados para ser efectivos en todos los tipos de cabello. Los ingredientes naturales trabajan para fortalecer el folículo capilar independientemente de la textura o tipo de cabello. Sin embargo, cada persona es única, por eso ofrecemos asesoría personalizada para adaptar el tratamiento a tus necesidades específicas.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">¿Cómo debo aplicar los productos?</div>
+                    <div class="faq-answer">
+                        <p>Para el Óleo Capilar, aplica 10-15 gotas directamente en el cuero cabelludo, masajeando suavemente con movimientos circulares. Idealmente, déjalo actuar durante la noche o al menos 2 horas antes de lavar. Para el Óleo de Cejas y Pestañas, aplica una pequeña cantidad con el aplicador roll-on en la base de pestañas y cejas, preferiblemente en la noche. Con cada producto recibirás instrucciones detalladas y acceso a nuestra asesoría personalizada.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">¿Los productos tienen efectos secundarios?</div>
+                    <div class="faq-answer">
+                        <p>Nuestros productos están formulados con ingredientes 100% naturales y no contienen químicos agresivos, por lo que no presentan efectos secundarios como los que pueden causar soluciones químicas (irritación, enrojecimiento, dependencia, etc.). Sin embargo, recomendamos realizar una prueba de alergia en una pequeña área antes del primer uso, especialmente si tienes piel sensible.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">¿Cuánto duran los productos?</div>
+                    <div class="faq-answer">
+                        <p>El Óleo Capilar de 60ml tiene una duración aproximada de 2-3 meses con uso regular (aplicación 2-3 veces por semana). El Óleo para Cejas y Pestañas de 13ml dura aproximadamente 3-4 meses con aplicación diaria. Ambos productos vienen con instrucciones precisas sobre la cantidad óptima a utilizar para maximizar resultados y duración.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta" id="comprar">
+        <div class="container">
+            <h2>Transforma tu cabello naturalmente</h2>
+            <p>Únete a miles de personas satisfechas que han recuperado la densidad y belleza de su cabello, cejas y pestañas con Forti by Amore Premium.</p>
+            <a href="#" class="btn">Comprar Ahora</a>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Forti by Amore Premium</h3>
+                    <p>Soluciones naturales para el crecimiento y fortalecimiento capilar con respaldo científico.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Enlaces Útiles</h3>
+                    <div class="footer-links">
+                        <a href="#inicio">Inicio</a>
+                        <a href="#productos">Productos</a>
+                        <a href="#beneficios">Beneficios</a>
+                        <a href="#resultados">Resultados</a>
+                        <a href="#testimonios">Testimonios</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Atención al Cliente</h3>
+                    <div class="footer-links">
+                        <a href="#">Preguntas Frecuentes</a>
+                        <a href="#">Política de Privacidad</a>
+                        <a href="#">Términos y Condiciones</a>
+                        <a href="#">Política de Envíos</a>
+                        <a href="#">Contacto</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div style="text-align: center; margin-bottom: 15px;">
+                    <img src="images/logo2.png" alt="Forti by Amore" style="height: 50px; width: auto;">
+                </div>
+                <p>&copy; 2025 Forti by Amore Premium. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <a href="#" class="floating-cta btn">¡Comprar Ahora!</a>
+    <a href="#inicio" class="scroll-to-top"><i class="fas fa-arrow-up"></i></a>
+    
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentNode;
+                item.classList.toggle('active');
+            });
+        });
+        
+        // Scroll to top button
+        const scrollToTopBtn = document.querySelector('.scroll-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('active');
+            } else {
+                scrollToTopBtn.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
